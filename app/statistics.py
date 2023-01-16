@@ -34,7 +34,7 @@ class ServerStatistics():
         self.start_influx()
 
         while True:
-            server_status = int(get_server_status(self.SERVER_ADDRESS))
+            server_status = int(get_server_status((socket.gethostbyname(self.SERVER_DOMAIN),2457)))
             server_players = int(get_players(self.SERVER_ADDRESS))
             timestamp = datetime.datetime.now().isoformat()
 
