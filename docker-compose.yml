@@ -1,0 +1,7 @@
+version: '3'
+services:
+  myservice:
+    build:
+      context: /volume1/docker/valheim-stats-custom
+      dockerfile: Dockerfile
+    image: valheim-stats
